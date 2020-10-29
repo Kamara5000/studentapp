@@ -1,0 +1,50 @@
+<div class="row ">
+    <div class="col-12 card p-3  shadow">
+        <input class="form-control" type="text" placeholder="enter your matric first name" [(ngModel)]="search">
+        <div class="row"  >
+            <Table class="table table-hover table-bordered table-striped table-sm table-strip ">
+                <thead class="thead-dark" >
+                  <th>SN</th>
+                    <th>MATRIC NO</th>
+                  <th>FIRST NAME</th>
+                  <th>FULL NAME</th>
+                  <th>DEPARTMENT</th>
+                  <th>ACTION</th>
+                                   </thead>
+                  <Tbody>
+                    <TR *ngFor="let i=index; let myStudent of Student | filter:search ">
+                        <td>{{i+1}}</td>
+                      <Td (click)="details(i)" >{{myStudent.matNO}}</Td>
+                      <Td (click)="details(i)">{{myStudent.firstName | uppercase}} {{myStudent.firstName | name}}</Td>
+                      <Td (click)="details(i)">{{myStudent.surName | uppercase }} 
+                        {{myStudent.firstName | uppercase | slice:0:1}}. {{myStudent.middleName | uppercase | slice:0:1}} </Td>
+                      <Td (click)="details(i)">{{myStudent.studentDept}}</Td>
+                      <Td ><button  class="my-2 btn btn-sm btn-primary" (click)="delstud(myStudent.matNO)" >delete</button>
+                        <button  class="my-2 btn btn-sm btn-dark" (click)="editstud(myStudent.matNO)" >edit</button>
+                        <button  class="my-2 btn btn-sm btn-dark" (click)="viewdetails()" >View</button></Td>
+                        
+                    </TR>
+                  </Tbody>
+              
+            
+            </Table>
+             
+        </div>
+        <div class="row">
+            <div class="col-9">
+                <input class="form-control" type="number" placeholder="enter your matric number" [(ngModel)]="matNO">
+                <input class="form-control" type="text" placeholder="enter your first name" [(ngModel)]="firstName">
+                <input class="form-control" type="text" placeholder="enter your middle name" [(ngModel)]="middleName">
+                <input class="form-control" type="text" placeholder="enter your  surname" [(ngModel)]="surName">
+                <input class="form-control" type="text" placeholder="enter your department" [(ngModel)]="dept">
+                <input class="form-control" type="number" placeholder="enter your valid phone number" [(ngModel)]="num">
+                <input class="form-control" type="email" placeholder="enter your email" [(ngModel)]="email">
+            </div>
+            <div class="col-2">
+                <button class="btn btn-danger" (click)="addStudent()">Save</button>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>

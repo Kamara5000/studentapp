@@ -1,0 +1,17 @@
+<div class="col" >
+    <div class="row" >
+        <div class="col-6">
+         <input  type="text" class="form-control" [(ngModel)]="item" placeholder="{{myIt}}"  />
+        </div> 
+         <div class="col-6" >
+             <input type="text" class="form-control" [(ngModel)]="price" placeholder="{{myPri}}"  />
+         </div>
+     </div>
+     <div class="row">
+        <div >
+            <button class="btn btn-primary btn-sm" (click)="addItem()" >Add Item</button>
+            <button class="btn btn-primary btn-sm" (click)="editItem()" > Edit Item</button>
+        </div>
+     </div>
+    {{myIt}} {{myPri}} {{myInd}}
+</div>

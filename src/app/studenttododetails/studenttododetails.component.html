@@ -1,0 +1,6 @@
+<h3>Todo Detail</h3>
+
+<div *ngFor="let student of studenttodo" [style.color]="studenttodo.completed ? 'green':'red'">
+<h5>user Id: {{student.userId}}</h5>
+<h5>Time: {{student.title}}</h5>
+</div>

@@ -1,0 +1,21 @@
+<Table class="table table-hover tab table-bordered table-striped table-bg table-strip ">
+    <thead class="thead-dark" >
+      <th>S/N</th>
+      <th>ITEMS</th>
+      <th>PRICE</th>
+      </thead>
+      <Tbody>
+        <TR *ngFor=" let i=index ;let myItem of items ">
+          <Td>{{i+1}}</Td>
+          <Td (click)="edit({i:i, price:myItem.price, item:myItem.item})">{{myItem.item}}</Td>
+          <Td (click)="edit(myItem)"> {{myItem.price | currency : 'NGN'}}</Td>
+          </TR>
+          </Tbody>
+</Table>
+<br><br>
+<div>
+    <app-child [myIt]="it" [myPri]="pri" [myInd]="ind" (addItemEvent)="addList($event)" (editItemEvent)="edited($event)" ></app-child>
+</div>
+
+
+        
