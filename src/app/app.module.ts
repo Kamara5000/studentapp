@@ -17,6 +17,10 @@ import { NamePipe } from './pipes/name.pipe';
 import { FilterPipe } from './pipes/filter.pipe';
 import { ParentComponent } from './parent/parent.component';
 import { ChildComponent } from './child/child.component';
+import { ParentOfSiblingsComponent } from './parent-of-siblings/parent-of-siblings.component';
+import { SiblingOneComponent } from './sibling-one/sibling-one.component';
+import { SiblingTwoComponent } from './sibling-two/sibling-two.component';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +36,10 @@ import { ChildComponent } from './child/child.component';
     NamePipe,
     FilterPipe,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ParentOfSiblingsComponent,
+    SiblingOneComponent,
+    SiblingTwoComponent
   ],
   imports: [
     BrowserModule,

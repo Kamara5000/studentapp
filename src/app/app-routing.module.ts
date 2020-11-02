@@ -10,6 +10,7 @@ import { SecurityGuard } from './security.guard';
 import { StudenttodoComponent } from './studenttodo/studenttodo.component';
 import { StudenttododetailsComponent } from './studenttododetails/studenttododetails.component';
 import { ParentComponent } from './parent/parent.component';
+import { ParentOfSiblingsComponent } from './parent-of-siblings/parent-of-siblings.component';
 
 
 
@@ -22,6 +23,7 @@ const routes: Routes = [
   ] },
   {path:'login', component:LoginComponent},
   {path:'parent', component:ParentComponent},
+  {path:'parentofsiblings', component:ParentOfSiblingsComponent},
   {path:'studentprofile', component:StudentprofileComponent,canActivate:[SecurityGuard]},
   {path:'studenttodo', component: StudenttodoComponent },
   {path:'studenttododetails/:id', component: StudenttododetailsComponent },

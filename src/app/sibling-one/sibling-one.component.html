@@ -1,0 +1,14 @@
+<Table class="table table-hover tab table-bordered table-striped table-bg table-strip ">
+    <thead class="thead-dark" >
+      <th>S/N</th>
+      <th>Matric NO</th>
+      <th>NAME</th>
+      </thead>
+      <Tbody *ngFor="let i = index; let myStudent of student" >
+        <TR>
+          <Td>{{i+1}}</Td>
+          <Td (click)="update(myStudent)">{{myStudent.matNO}}</Td>
+          <Td (click)="update(myStudent)">{{myStudent.firstName}}</Td>
+        </TR>
+          </Tbody>
+</Table>

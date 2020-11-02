@@ -1,0 +1,27 @@
+<div class="row ">
+    <div class="col-12 card p-3  shadow">
+        <div class="row"  >
+            <Table class="table table-hover table-bordered table-striped table-sm table-strip ">
+                <thead class="thead-dark" >
+                    <th>MATRIC NO</th>
+                  <th>FIRST NAME</th>
+                  <th>SURNAME</th>
+                  <th>MIDDLE NAME</th>
+                  <th>DEPARTMENT</th>
+                </thead>
+                  <Tbody>
+                    <TR>
+                      <Td>{{stud.matNO}}</Td>
+                      <Td (click)="edit({firstName:stud.firstName})">{{stud.firstName | uppercase}}</Td>
+                      <Td (click)="edit({surName:stud.surName})">{{stud.surName | uppercase }} </Td>
+                      <Td (click)="edit({middleName:stud.middleName})">
+                          {{stud.middleName | uppercase | slice:0:1}} </Td>
+                      <Td (click)="edit({studentDept:stud.studentDept})">{{stud.studentDept}}</Td>
+                    </TR>
+                  </Tbody>
+              
+            
+            </Table>
+             <input type="text" [(ngModel)]="k" class="form-control w-25 "/>
+             <button class="btn btn-danger  ml-2" (click)="update()" >Edit</button>
+        </div>
